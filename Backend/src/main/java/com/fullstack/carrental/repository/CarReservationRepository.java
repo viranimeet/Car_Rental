@@ -12,6 +12,4 @@ import java.util.List;
 public interface CarReservationRepository extends JpaRepository<CarReservation, Long> {
     List<CarReservation> findByStatus(String status);
     List<CarReservation> findByUserId(Long userId);
-//    @Query("SELECT cr, c FROM CarReservation cr JOIN FETCH cr.car c WHERE cr.user.id = :userId")
-//    List<Object[]> findUserReservationsWithCar(@Param("userId") Long userId);
 }

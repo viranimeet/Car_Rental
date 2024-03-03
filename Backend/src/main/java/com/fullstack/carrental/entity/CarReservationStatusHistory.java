@@ -21,7 +21,7 @@ public class CarReservationStatusHistory {
     private Date changeDate;
 
     public CarReservationStatusHistory() {
-        // Default constructor
+
     }
 
     public CarReservationStatusHistory(CarReservation reservation, String status, Date changeDate) {

@@ -3,17 +3,17 @@ import Header_Admin from "./Header_Admin";
 const Dashboard = () => {
     return (
         <>
-        <div>
+            <div>
 
-        <Header_Admin/>
-        </div>
+                <Header_Admin />
+            </div>
             <div className="bg-white w-full py-16 pb-20 lg:pb-[50px] pt-20 lg:pt-[80px] overflow-x-hidden">
                 <div className="container mx-auto px-4 ">
                     <div className="flex flex-wrap items-center">
                         <div className="w-full lg:w-7/12 px-4 lg:pr-6">
                             <div className="hero-content ml-20 mt-5">
                                 <h1 className="mb-5 text-4xl font-bold leading-[1.208] text-dark sm:text-[42px] lg:text-[40px] xl:text-5xl">
-                                    {/* Kickstart Startup Website with TailGrids */}
+
                                     Explore the Open Road with WheelzWay Car Rentals
                                 </h1>
                                 <p className="mb-8 max-w-[480px] text-base text-body-color dark:text-dark-6">
@@ -30,19 +30,15 @@ const Dashboard = () => {
                                     </h6>
 
                                     <div className="flex items-center space-x-4">
-                                        {/* Add SingleImage components here */}
                                         <SingleImage
-                                            // href="#"
                                             imgSrc="https://cdn.tailgrids.com/2.0/image/assets/images/brands/ayroui.svg"
                                         />
 
                                         <SingleImage
-                                            // href="#"
                                             imgSrc="https://cdn.tailgrids.com/2.0/image/assets/images/brands/graygrids.svg"
                                         />
 
                                         <SingleImage
-                                            // href="#"
                                             imgSrc="https://cdn.tailgrids.com/2.0/image/assets/images/brands/uideck.svg"
                                         />
                                     </div>
@@ -53,7 +49,7 @@ const Dashboard = () => {
                             <div className="relative inline-block ml-10 max-w-full lg:max-w-none">
                                 <img
                                     // src="../../../public/car_rental_bg.png"
-                                    
+
                                     src="../../../public/Designer.png"
                                     alt="hero"
                                     className="w-500"
@@ -104,8 +100,6 @@ const Dashboard = () => {
         </>
     );
 };
-
-
 
 const SingleImage = ({ href, imgSrc }) => {
     return (

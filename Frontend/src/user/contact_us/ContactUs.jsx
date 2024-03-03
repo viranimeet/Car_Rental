@@ -4,10 +4,9 @@ import Header from '../common/Header'
 const ContactUs = () => {
     return (
         <>
-        <div>
-        <Header/>
-
-        </div>
+            <div>
+                <Header />
+            </div>
             <div class="relative flex items-top justify-center min-h-screen bg-white sm:items-center sm:pt-0">
                 <div class="max-w-6xl mx-4 sm:px-6 lg:px-8">
                     <div class="mt-0 overflow-hidden">

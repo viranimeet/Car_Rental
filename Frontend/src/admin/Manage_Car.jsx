@@ -24,7 +24,7 @@ const Manage_Car = () => {
         if (confirmDelete) {
             try {
                 await axios.delete(`http://localhost:8080/delete_car/${carId}`);
-                fetchCars(); // Refresh cars list after deletion
+                fetchCars();
             } catch (error) {
                 console.error('Error deleting car:', error);
             }
@@ -35,8 +35,8 @@ const Manage_Car = () => {
 
     return (
         <div>
-        <div>
-            <Header_Admin />
+            <div>
+                <Header_Admin />
             </div>
             <h1 className="text-2xl font-semibold mb-4">Manage Cars Details</h1>
 

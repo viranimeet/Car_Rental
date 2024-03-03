@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom'; // Import useParams and useNavigate
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Header from '../common/Header';
 
@@ -9,7 +9,7 @@ const MakeRequest = () => {
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
     const [userId, setUserId] = useState(null); // State to hold the user ID
-    const navigate = useNavigate(); // Use useNavigate hook
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetchCarDetails();

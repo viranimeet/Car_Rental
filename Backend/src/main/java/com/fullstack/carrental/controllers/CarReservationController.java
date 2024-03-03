@@ -36,11 +36,7 @@ public class CarReservationController {
         CarReservation savedReservation = carReservationService.addCarReservation(reservationDto,id);
         return new ResponseEntity<>(savedReservation, HttpStatus.CREATED);
     }
-//    @GetMapping("/details")
-//    public ResponseEntity<List<CarReservationDto>> getAllReservationsWithDetails() {
-//        List<CarReservationDto> reservationDtos = carReservationService.getAllReservationsWithDetails();
-//        return ResponseEntity.ok(reservationDtos);
-//    }
+
     @GetMapping("/pending-requests")
     public ResponseEntity<List<CarReservationDto>> getPendingRequests() {
         List<CarReservationDto> pendingRequests = carReservationService.getPendingReservations();
@@ -52,7 +48,7 @@ public class CarReservationController {
         if (acceptedReservation != null) {
             return new ResponseEntity<>(acceptedReservation, HttpStatus.OK);
         } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND); // Or appropriate status code
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 
@@ -62,7 +58,7 @@ public class CarReservationController {
         if (declinedReservation != null) {
             return new ResponseEntity<>(declinedReservation, HttpStatus.OK);
         } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND); // Or appropriate status code
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 }

@@ -33,7 +33,6 @@ public class AuthenticationController {
         Long isAuthenticated = authenticationService.authenticate(loginRequest.getEmail(), loginRequest.getPassword());
 
         if (isAuthenticated != -1) {
-
 //            return ResponseEntity.("Login successful!",isAuthenticated);
             return new ResponseEntity(isAuthenticated, HttpStatus.OK);
         } else {

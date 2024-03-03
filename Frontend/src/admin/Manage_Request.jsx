@@ -22,7 +22,7 @@ const Manage_Request = () => {
         console.log("handel accept request id:" + requestId);
         axios.put(`http://localhost:8080/${requestId}/accept`)
             .then(response => {
-                fetchData(); // Refresh the list after updating status
+                fetchData();
             })
             .catch(error => {
                 console.error('Error accepting request:', error);
@@ -33,7 +33,7 @@ const Manage_Request = () => {
         console.log("hande decline request id:" + requestId);
         axios.put(`http://localhost:8080/${requestId}/decline`)
             .then(response => {
-                fetchData(); // Refresh the list after updating status
+                fetchData();
             })
             .catch(error => {
                 console.error('Error declining request:', error);
@@ -87,78 +87,3 @@ const Manage_Request = () => {
 };
 
 export default Manage_Request;
-
-
-
-
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
-// import Header from '../user/common/Header';
-
-// const Manage_Request = () => {
-//     const [requests, setRequests] = useState([]);
-
-//     useEffect(() => {
-//         fetchRequests();
-//     }, []);
-
-//     const fetchRequests = async () => {
-//         try {
-//             const response = await axios.get('http://localhost:8080/admin/requests'); // Endpoint to fetch all requests
-//             setRequests(response.data);
-//         } catch (error) {
-//             console.error('Error fetching requests:', error);
-//         }
-//     };
-
-//     const handleAcceptRequest = async (requestId) => {
-//         try {
-//             // Send request to backend to accept the request with the given ID
-//             await axios.put(`http://localhost:8080/admin/requests/${requestId}/accept`);
-//             // Refresh the list of requests
-//             fetchRequests();
-//         } catch (error) {
-//             console.error('Error accepting request:', error);
-//         }
-//     };
-
-//     const handleDeclineRequest = async (requestId) => {
-//         try {
-//             // Send request to backend to decline the request with the given ID
-//             await axios.put(`http://localhost:8080/admin/requests/${requestId}/decline`);
-//             // Refresh the list of requests
-//             fetchRequests();
-//         } catch (error) {
-//             console.error('Error declining request:', error);
-//         }
-//     };
-
-//     return (
-//         <>
-//             <Header />
-//             <div className="container mx-auto">
-//                 <h2 className="text-2xl font-semibold mb-4">Admin Requests</h2>
-//                 <ul className="divide-y divide-gray-200">
-//                     {requests.map((request) => (
-//                         <li key={request.id} className="py-4">
-//                             <div className="flex justify-between items-center">
-//                                 <div>
-//                                     <p className="text-lg font-semibold">{request.username}</p>
-//                                     <p>Car Name: {request.carName}</p>
-//                                     <p>Start Date: {request.startDate}</p>
-//                                     <p>End Date: {request.endDate}</p>
-//                                 </div>
-//                                 <div>
-//                                     <button onClick={() => handleAcceptRequest(request.id)} className="bg-green-500 text-white px-4 py-2 rounded mr-2">Accept</button>
-//                                     <button onClick={() => handleDeclineRequest(request.id)} className="bg-red-500 text-white px-4 py-2 rounded">Decline</button>
-//                                 </div>
-//                             </div>
-//                         </li>
-//                     ))}
-//                 </ul>
-//             </div>
-//         </>
-//     );
-// }
-
-// export default Manage_Request;

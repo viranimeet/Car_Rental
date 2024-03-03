@@ -21,7 +21,6 @@ public class SignUpRequest {
         this.confirmPassword = confirmPassword;
     }
 
-    // Getters and setters
     public String getEmail() {
         return email;
     }

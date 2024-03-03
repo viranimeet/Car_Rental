@@ -35,11 +35,6 @@ public class CarRequest {
     public CarRequest() {
     }
 
-
-
-    // Getters and setters for other fields
-
-
     public CarRequest(Long id, Date startDate, Date endDate, Long userId, Long carId, User user, Car car) {
         this.id = id;
         this.startDate = startDate;

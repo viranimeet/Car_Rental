@@ -36,7 +36,6 @@ const Header_Admin = () => {
                     <ListItem NavLink="/dashboard">Home</ListItem>
                     <ListItem NavLink="/manage_car">Manage car</ListItem>
                     <ListItem NavLink="/all_request">Manage Request</ListItem>
-                    {/* <ListItem NavLink="/contact">Contact Us</ListItem> */}
                   </ul>
                 </nav>
               </div>

@@ -24,9 +24,6 @@ public class CarReservation {
     @Column(name = "status", nullable = false)
     private String status;
     private String carName;
-//    @ManyToOne
-//    @JoinColumn(name = "car_id")
-//    private Car car;
     public CarReservation() {
     }
 
@@ -79,7 +76,6 @@ public class CarReservation {
     public void setCarId(Long carId) {
         this.carId = carId;
     }
-// Getters and setters
 
     public String getStatus() {
         return status;

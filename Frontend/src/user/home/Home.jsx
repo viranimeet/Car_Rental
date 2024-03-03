@@ -3,7 +3,7 @@ import Header from "../common/Header";
 const Home = () => {
     return (
         <>
-        <Header/>
+            <Header />
             <div className="bg-white w-full py-16 pb-20 lg:pb-[50px] pt-20 lg:pt-[80px] overflow-x-hidden">
                 <div className="container mx-auto px-4 ">
                     <div className="flex flex-wrap items-center">

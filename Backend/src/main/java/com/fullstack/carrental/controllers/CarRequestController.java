@@ -25,7 +25,7 @@ public class CarRequestController {
         if (newRequest != null) {
             return new ResponseEntity<>(newRequest, HttpStatus.CREATED);
         } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND); // Or appropriate status code
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 

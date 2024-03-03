@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import axios from 'axios'; // Import axios for making HTTP requests
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Header from '../common/Header';
 
 
 const Sign_up = () => {
-    // State variables to store input values
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -13,15 +12,13 @@ const Sign_up = () => {
 
     // Function to handle form submission
     const handleSubmit = async (e) => {
-        e.preventDefault(); // Prevent default form submission behavior
+        e.preventDefault();
 
-        // Check if passwords match
         if (password !== confirmPassword) {
             alert("Passwords do not match");
             return;
         }
 
-        // Create a data object with user input
         const data = {
             email,
             password,
@@ -29,17 +26,13 @@ const Sign_up = () => {
         };
 
         try {
-            // Send a POST request to the backend endpoint (/signup)
             const response = await axios.post('http://localhost:8080/signup', data);
 
-            // Handle successful signup
-            alert(response.data); // Show success message
-            // After successful signup, navigate to the login page
+            alert(response.data);
             navigate('/login');
         } catch (error) {
-            // Handle error
-            alert("Signup failed. Please try again."); // Show error message
-            console.error(error); // Log the error for debugging
+            alert("Signup failed. Please try again.");
+            console.error(error);
         }
     };
     return (
