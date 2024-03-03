@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 const Header_Admin = () => {
-    const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
-    return (
-      <>
-      <header className="bg-blue-800 left-0 top-0 right-0 z-0 flex fixed items-center ">
+  return (
+    <>
+      <header className="bg-blue-800 left-0 top-0 right-0 z-0 flex items-center ">
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4">
@@ -36,7 +36,7 @@ const Header_Admin = () => {
                     <ListItem NavLink="/dashboard">Home</ListItem>
                     <ListItem NavLink="/manage_car">Manage car</ListItem>
                     <ListItem NavLink="/all_request">Manage Request</ListItem>
-                    <ListItem NavLink="/contact">Contact Us</ListItem>
+                    {/* <ListItem NavLink="/contact">Contact Us</ListItem> */}
                   </ul>
                 </nav>
               </div>
@@ -47,7 +47,7 @@ const Header_Admin = () => {
                 >
                   Sign in
                 </a>
-  
+
                 <a
                   href="/register"
                   className="rounded-lg bg-primary px-7 py-3 text-base font-medium text-white hover:bg-opacity-90"
@@ -59,21 +59,21 @@ const Header_Admin = () => {
           </div>
         </div>
       </header>
-      </>
-    );
-  };
-  
-  const ListItem = ({ children, NavLink }) => {
-    return (
-      <li>
-        <a
-          href={NavLink}
-          className="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-10 lg:inline-flex"
-        >
-          {children}
-        </a>
-      </li>
-    );
+    </>
+  );
+};
+
+const ListItem = ({ children, NavLink }) => {
+  return (
+    <li>
+      <a
+        href={NavLink}
+        className="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-10 lg:inline-flex"
+      >
+        {children}
+      </a>
+    </li>
+  );
 }
 
 export default Header_Admin;

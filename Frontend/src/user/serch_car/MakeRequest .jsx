@@ -38,6 +38,7 @@ const MakeRequest = () => {
                 startDate,
                 endDate
             });
+            window.alert("your request added....");
             console.log(response.data);
             navigate('/search_car');
         } catch (error) {
@@ -67,6 +68,7 @@ const MakeRequest = () => {
                             className="border rounded px-4 py-2 w-full"
                             value={startDate}
                             onChange={(e) => setStartDate(e.target.value)}
+                            required
                         />
                     </div>
                     <div className="mb-4">
@@ -77,6 +79,7 @@ const MakeRequest = () => {
                             className="border rounded px-4 py-2 w-full"
                             value={endDate}
                             onChange={(e) => setEndDate(e.target.value)}
+                            required
                         />
                     </div>
                     <button type="submit"

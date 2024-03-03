@@ -35,7 +35,9 @@ const Manage_Car = () => {
 
     return (
         <div>
+        <div>
             <Header_Admin />
+            </div>
             <h1 className="text-2xl font-semibold mb-4">Manage Cars Details</h1>
 
             <Link to="/add_car" className="bg-blue-500 text-white px-4 py-2 rounded mb-4 justify-center">
