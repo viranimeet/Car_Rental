@@ -4,7 +4,6 @@ const Dashboard = () => {
     return (
         <>
             <div>
-
                 <Header_Admin />
             </div>
             <div className="bg-white w-full py-16 pb-20 lg:pb-[50px] pt-20 lg:pt-[80px] overflow-x-hidden">

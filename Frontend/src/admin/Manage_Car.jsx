@@ -52,7 +52,6 @@ const Manage_Car = () => {
                         <p>Rate: {car.rate}</p>
 
                         <div className="mt-2">
-                            {/* Button to delete car */}
                             <button
                                 onClick={() => handleDelete(car.id, car.carName)}
                                 className="bg-red-500 text-white px-2 py-1 rounded mr-2"
@@ -60,7 +59,6 @@ const Manage_Car = () => {
                                 Delete
                             </button>
 
-                            {/* Button to navigate to Edit Car page */}
                             <Link
                                 to={`/edit_car/${car.id}`}
                                 className="bg-blue-500 text-white px-2 py-1 rounded"

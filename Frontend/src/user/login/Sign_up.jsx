@@ -10,7 +10,6 @@ const Sign_up = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const navigate = useNavigate();
 
-    // Function to handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
 

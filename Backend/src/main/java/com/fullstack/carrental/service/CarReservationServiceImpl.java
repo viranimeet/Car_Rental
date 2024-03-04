@@ -57,33 +57,6 @@ public class CarReservationServiceImpl implements CarReservationService {
         return reservationDtos;
     }
 
-//    @Override
-//    public List<CarReservationDto> getAllReservationsWithDetails() {
-//        List<CarReservationDto> reservationDtos = new ArrayList<>();
-//        List<CarReservation> reservations = carReservationRepository.findAll();
-//
-//        for (CarReservation reservation : reservations) {
-//            Car car = carRepository.findById(reservation.getCarId()).orElse(null);
-//            User user = userRepository.findById(reservation.getUserId()).orElse(null);
-//            CarReservation cr = new CarReservation();
-//            cr.setId(reservation.getId());
-//
-//            if (car != null && user != null) {
-//                CarReservationDto dto = new CarReservationDto();
-//                dto.setId(cr.getId());
-//                dto.setCarName(car.getCarName());
-//                dto.setCarId(car.getId());
-//                dto.setUserEmail(user.getEmail());
-//                dto.setUserId(user.getId());
-//                dto.setStartDate(reservation.getStartDate());
-//                dto.setEndDate(reservation.getEndDate());
-//                reservationDtos.add(dto);
-//            }
-//        }
-//
-//        return reservationDtos;
-//    }
-
     @Override
     public List<CarReservationDto> getPendingReservations() {
         List<CarReservationDto> pendingReservationDtos = new ArrayList<>();
@@ -109,20 +82,6 @@ public class CarReservationServiceImpl implements CarReservationService {
         return pendingReservationDtos;
     }
 
-//    @Override
-//    public CarReservation addCarReservation(CarReservationDto  reservation) {
-////        reservation.setStatus("pending"); // Set status to pending by default
-//        CarReservation savedReservation = carReservationRepository.save(reservation);
-//
-//        // Add entry to status history
-//        CarReservationStatusHistory statusHistory = new CarReservationStatusHistory();
-//        statusHistory.setReservation(savedReservation);
-//        statusHistory.setStatus("pending");
-//        statusHistory.setChangeDate(new Date());
-//        statusHistoryRepository.save(statusHistory);
-//
-//        return savedReservation;
-//    }
 public CarReservation addCarReservation(CarReservationDto reservationDto,Long id) {
     // Convert CarReservationDto to CarReservation
     CarReservation reservation = new CarReservation();
@@ -195,15 +154,11 @@ public CarReservation addCarReservation(CarReservationDto reservationDto,Long id
         List<CarReservation> userReservations = new ArrayList<>();
         List<CarReservation> reservations = carReservationRepository.findByUserId(userId);
         for (CarReservation reservation : reservations) {
-            // Retrieve the carId associated with the reservation
             Long carId = reservation.getCarId();
-            // Retrieve the Car entity using the carId
             Car car = carRepository.findById(carId).orElse(null);
             if (car != null) {
-                // If the Car entity is not null, set the carName in the reservation
                 reservation.setCarName(car.getCarName());
             }
-            // Add reservation to the list
             userReservations.add(reservation);
         }
         return userReservations;

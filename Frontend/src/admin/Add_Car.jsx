@@ -120,11 +120,11 @@ const Add_Car = () => {
                                                     required
                                                 />
                                             </div>
-                                            <div class="md:col-span-4 text-center">
-                                                <div class="inline-flex items-end">
+                                            <div className="md:col-span-4 text-center">
+                                                <div className="inline-flex items-end">
                                                     <button
                                                         type="submit"
-                                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                                                         onClick={handleSubmit}
                                                     >
                                                         Add Car
@@ -132,10 +132,10 @@ const Add_Car = () => {
                                                 </div>
                                             </div>
 
-                                            <div class="md:col-span-4 text-center">
-                                                <div class="inline-flex items-end">
+                                            <div className="md:col-span-4 text-center">
+                                                <div className="inline-flex items-end">
                                                     <Link to="/manage_car"
-                                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
 
                                                     >
                                                         Back

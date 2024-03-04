@@ -30,10 +30,10 @@ public class CarServiceImpl implements CarService {
     @Override
     public Car updateCar(Long id, Car car) {
         if (carRepository.existsById(id)) {
-            car.setId(id); // Ensure the correct ID is set for update
+            car.setId(id);
             return carRepository.save(car);
         }
-        return null; // Or throw an exception for not found
+        return null;
     }
 
     @Override

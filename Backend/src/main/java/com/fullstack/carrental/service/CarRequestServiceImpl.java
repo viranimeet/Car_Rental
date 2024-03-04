@@ -8,7 +8,6 @@ import com.fullstack.carrental.repository.CarRepository;
 import com.fullstack.carrental.repository.CarRequestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.Optional;
 
 
@@ -34,7 +33,6 @@ public class CarRequestServiceImpl implements CarRequestService {
         if (optionalCar.isPresent() && optionalUser.isPresent()) {
             Car car = optionalCar.get();
             User user = optionalUser.get();
-
             // Set car and user references in the request
             request.setCar(car);
             request.setUser(user);
