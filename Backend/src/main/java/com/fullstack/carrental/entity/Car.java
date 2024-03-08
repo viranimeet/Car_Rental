@@ -81,9 +81,7 @@ public class Car {
         this.fuelType = fuelType;
         this.carDescription = carDescription;
     }
-
-
-
+    
     // Add image/photo logic here
 
 

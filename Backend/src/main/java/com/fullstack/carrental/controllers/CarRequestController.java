@@ -18,7 +18,6 @@ public class CarRequestController {
     public CarRequestController(CarRequestService carRequestService) {
         this.carRequestService = carRequestService;
     }
-
     @PostMapping("/{carId}/{userId}")
     public ResponseEntity<CarRequest> makeRequest(@PathVariable Long carId, @PathVariable Long userId, @RequestBody CarRequest request) {
         CarRequest newRequest = carRequestService.makeRequest(carId, userId, request);

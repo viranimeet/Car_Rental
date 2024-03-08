@@ -1,12 +1,12 @@
-import React from 'react'
+// import React from 'react'
 
-const MyRequestsPage = () => {
-  return (
-    <div>MyRequestsPage</div>
-  )
-}
+// const MyRequestsPage = () => {
+//   return (
+//     <div>MyRequestsPage</div>
+//   )
+// }
 
-export default MyRequestsPage;
+// export default MyRequestsPage;
 
 
 // import React, { useEffect, useState } from 'react';

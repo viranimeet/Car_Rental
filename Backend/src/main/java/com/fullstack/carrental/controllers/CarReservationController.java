@@ -19,11 +19,6 @@ public class CarReservationController {
     public CarReservationController(CarReservationService carReservationService) {
         this.carReservationService = carReservationService;
     }
-//    @GetMapping("/user/{userId}/reservations") // Endpoint to fetch requests for a specific user
-//    public ResponseEntity<List<CarReservationDto>> getUserReservations(@PathVariable Long userId) {
-//        List<CarReservationDto> userReservations = carReservationService.getUserReservations(userId);
-//        return ResponseEntity.ok(userReservations);
-//    }
     @GetMapping("/user/{userId}/reservations") // Endpoint to fetch requests for a specific user
     public ResponseEntity<List<CarReservation>> getUserReservations(@PathVariable Long userId) {
         List<CarReservation> userReservations = carReservationService.getUserReservations(userId);

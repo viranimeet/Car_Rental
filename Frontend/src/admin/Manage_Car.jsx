@@ -5,7 +5,7 @@ import Header_Admin from './Header_Admin';
 
 const Manage_Car = () => {
     const [cars, setCars] = useState([]);
-
+    
     useEffect(() => {
         fetchCars();
     }, []);
@@ -30,8 +30,6 @@ const Manage_Car = () => {
             }
         }
     };
-
-
 
     return (
         <div>
