@@ -8,7 +8,7 @@ const MakeRequest = () => {
     const [carDetails, setCarDetails] = useState({});
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
-    const [userId, setUserId] = useState(null); // State to hold the user ID
+    const [userId, setUserId] = useState(null);
     const navigate = useNavigate();
 
     useEffect(() => {

@@ -44,20 +44,20 @@ const Add_Car = () => {
     return (
         <div>
             <Header_Admin />
-            <div class="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
-                <div class="container max-w-screen-lg mx-auto">
+            <div className="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
+                <div className="container max-w-screen-lg mx-auto">
                     <div>
-                        <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
-                            <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
-                                <div class="text-gray-600 just">
-                                    <p class="font-medium text-lg">Add Car Details</p>
+                        <div className="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
+                            <div className="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
+                                <div className="text-gray-600 just">
+                                    <p className="font-medium text-lg">Add Car Details</p>
                                     <p>Please fill out all the fields.</p>
                                 </div>
 
-                                <div class="lg:col-span-2">
+                                <div className="lg:col-span-2">
                                     <form >
-                                        <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
-                                            <div class="md:col-span-5">
+                                        <div className="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+                                            <div className="md:col-span-5">
                                                 <label htmlFor="car_name">Car Name</label>
                                                 <input
                                                     type="text"
@@ -70,7 +70,7 @@ const Add_Car = () => {
                                                 />
                                             </div>
 
-                                            <div class="md:col-span-5">
+                                            <div className="md:col-span-5">
                                                 <label htmlFor="no_of_seats">No. Of Seats</label>
                                                 <input
                                                     type="text"
@@ -83,7 +83,7 @@ const Add_Car = () => {
                                                 />
                                             </div>
 
-                                            <div class="md:col-span-5">
+                                            <div className="md:col-span-5">
                                                 <label htmlFor="Rate">Rate</label>
                                                 <input
                                                     type="text"
@@ -96,7 +96,7 @@ const Add_Car = () => {
                                                 />
                                             </div>
 
-                                            <div class="md:col-span-5">
+                                            <div className="md:col-span-5">
                                                 <label htmlFor="car_description">Car Description</label>
                                                 <input
                                                     type="text"
@@ -108,7 +108,7 @@ const Add_Car = () => {
                                                     required
                                                 />
                                             </div>
-                                            <div class="md:col-span-5">
+                                            <div className="md:col-span-5">
                                                 <label htmlFor="car_description">Fuel Type</label>
                                                 <input
                                                     type="text"
