@@ -4,7 +4,7 @@ import axios from 'axios';
 import Header from '../common/Header';
 
 const MakeRequest = () => {
-    const { id: carId } = useParams(); // Use useParams to access route parameters
+    const { id: carId } = useParams();
     const [carDetails, setCarDetails] = useState({});
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');

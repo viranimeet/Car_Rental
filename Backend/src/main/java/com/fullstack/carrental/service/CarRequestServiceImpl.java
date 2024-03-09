@@ -16,7 +16,7 @@ public class CarRequestServiceImpl implements CarRequestService {
 
     private final CarRequestRepository carRequestRepository;
     private final CarRepository carRepository;
-    private final AuthenticationRepository authenticationRepository; // Assuming UserRepository exists for user-related operations
+    private final AuthenticationRepository authenticationRepository;
 
     @Autowired
     public CarRequestServiceImpl(CarRequestRepository carRequestRepository, CarRepository carRepository, AuthenticationRepository authenticationRepository) {
@@ -47,31 +47,4 @@ public class CarRequestServiceImpl implements CarRequestService {
 
 }
 
-//
-//@Service
-//public class CarRequestServiceImpl implements CarRequestService {
-//
-//    private final CarRequestRepository carRequestRepository;
-//    private final CarRepository carRepository;
-//
-//    @Autowired
-//    public CarRequestServiceImpl(CarRequestRepository carRequestRepository, CarRepository carRepository) {
-//        this.carRequestRepository = carRequestRepository;
-//        this.carRepository = carRepository;
-//    }
-//
-//    @Override
-//    public CarRequest makeRequest(Long carId, CarRequest request) {
-//        Optional<Car> optionalCar = carRepository.findById(carId);
-//        if (optionalCar.isPresent()) {
-//            Car car = optionalCar.get();
-//            // Set car reference in the request
-//            request.setCar(car);
-//            // Save the request
-//            return carRequestRepository.save(request);
-//        } else {
-//            // Handle case when car is not found
-//            return null;
-//        }
-//    }
-//}
+

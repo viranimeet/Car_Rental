@@ -83,24 +83,17 @@ public class CarReservationServiceImpl implements CarReservationService {
     }
 
 public CarReservation addCarReservation(CarReservationDto reservationDto,Long id) {
-    // Convert CarReservationDto to CarReservation
     CarReservation reservation = new CarReservation();
     reservation.setId(id);
     reservation.setUserId(reservationDto.getUserId());
     reservation.setCarId(reservationDto.getCarId());
     reservation.setStartDate(reservationDto.getStartDate());
     reservation.setEndDate(reservationDto.getEndDate());
-    reservation.setStatus("pending"); // Set status to pending by default
+    reservation.setStatus("pending");
 
-    // Save reservation
+
     CarReservation savedReservation = carReservationRepository.save(reservation);
 
-    // Add entry to status history
-//    CarReservationStatusHistory statusHistory = new CarReservationStatusHistory();
-//    statusHistory.setReservation(savedReservation);
-//    statusHistory.setStatus("pending");
-//    statusHistory.setChangeDate(new Date());
-//    statusHistoryRepository.save(statusHistory);
 
     return savedReservation;
 }
@@ -125,7 +118,7 @@ public CarReservation addCarReservation(CarReservationDto reservationDto,Long id
 
             return savedReservation;
         }
-        return null; // or throw exception
+        return null;
     }
 
     @Override
@@ -137,17 +130,9 @@ public CarReservation addCarReservation(CarReservationDto reservationDto,Long id
             // Update status of the reservation
             reservation.setStatus("rejected");
             CarReservation savedReservation = carReservationRepository.save(reservation);
-
-            // Create entry in status history
-//            CarReservationStatusHistory statusHistory = new CarReservationStatusHistory();
-//            statusHistory.setReservation(savedReservation);
-//            statusHistory.setStatus("rejected");
-//            statusHistory.setChangeDate(new Date());
-//            statusHistoryRepository.save(statusHistory);
-
             return savedReservation;
         }
-        return null; // or throw exception
+        return null;
     }
     @Override
     public List<CarReservation> getUserReservations(Long userId) {

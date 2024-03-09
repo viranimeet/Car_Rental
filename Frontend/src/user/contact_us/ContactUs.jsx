@@ -37,7 +37,6 @@ const ContactUs = () => {
                                     </svg>
                                     <div className="ml-4 text-md tracking-wide font-semibold w-40">
                                         <a href="https://veilmail.io/e/FkKh7o">https://abcd.com</a>
-                                        {/* //veilmail.io/e/FkKh7o */}
                                     </div>
                                 </div>
                             </div>

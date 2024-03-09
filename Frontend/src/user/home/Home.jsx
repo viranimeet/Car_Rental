@@ -10,13 +10,9 @@ const Home = () => {
                         <div className="w-full lg:w-7/12 px-4 lg:pr-6">
                             <div className="hero-content ml-20 mt-5">
                                 <h1 className="mb-5 text-4xl font-bold leading-[1.208] text-dark sm:text-[42px] lg:text-[40px] xl:text-5xl">
-                                    {/* Kickstart Startup Website with TailGrids */}
                                     Explore the Open Road with WheelzWay Car Rentals
                                 </h1>
                                 <p className="mb-8 max-w-[480px] text-base text-body-color dark:text-dark-6">
-                                    {/* With TailGrids, business and students thrive together.
-                                    Business can perfectly match their staffing to changing demand
-                                    throughout the dayed. */}
                                     At WheelzWay, we're here to make your journey seamless. Whether it's a spontaneous road trip or a planned excursion, we ensure you have the right wheels at the right time. Our flexible booking options and reliable service ensure that your travel plans adapt effortlessly to your needs, leaving you free to focus on the road ahead.
                                 </p>
                                 <a className="mb-2 inline-block rounded bg-teal-950 px-12 pt-4 pb-3.5 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] md:mr-2 md:mb-0"
@@ -30,7 +26,6 @@ const Home = () => {
                                     </h6>
 
                                     <div className="flex items-center space-x-4">
-                                        {/* Add SingleImage components here */}
                                         <SingleImage
                                             href="#"
                                             imgSrc="https://cdn.tailgrids.com/2.0/image/assets/images/brands/ayroui.svg"
