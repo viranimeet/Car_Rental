@@ -30,8 +30,13 @@ const Sign_up = () => {
             alert(response.data);
             navigate('/login');
         } catch (error) {
-            alert("Signup failed. Please try again.");
-            console.error(error);
+            // Check if the error response indicates that the user already exists
+            if (error.response && error.response.status === 400 && error.response.data === 'User with this email already exists') {
+                alert('User with this email already exists');
+            } else {
+                alert("Signup failed. Please try again.");
+                console.error(error);
+            }
         }
     };
     return (

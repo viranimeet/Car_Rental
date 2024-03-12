@@ -77,8 +77,8 @@ const Footer = () => {
                     © 2024 Copyright:
                     <a
                         className="text-neutral-800 dark:text-neutral-300"
-                        href="https://tw-elements.com/"
-                    >TW elements</a
+                        // href="https://tw-elements.com/"
+                    >WheelzWay</a
                     >
                 </div>
             </footer>

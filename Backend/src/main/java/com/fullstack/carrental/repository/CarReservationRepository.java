@@ -12,4 +12,5 @@ import java.util.List;
 public interface CarReservationRepository extends JpaRepository<CarReservation, Long> {
     List<CarReservation> findByStatus(String status);
     List<CarReservation> findByUserId(Long userId);
+    void deleteByCarId(Long carId);
 }

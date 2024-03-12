@@ -30,6 +30,7 @@ const MakeRequest = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
         console.log('User ID before request:', userId);
         try {
             const response = await axios.post(`http://localhost:8080/car_reservations/123`, {
@@ -50,7 +51,8 @@ const MakeRequest = () => {
         <div>
             <Header />
             <div className="container mx-auto">
-                <h2 className="text-2xl font-semibold mb-4">Make a Request</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-center">Make a Request</h2>
+
                 <div>
                     <h3>Car Details</h3>
                     <p>Car Name: {carDetails.carName}</p>

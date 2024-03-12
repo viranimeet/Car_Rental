@@ -12,6 +12,11 @@ import com.fullstack.carrental.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -83,6 +88,7 @@ public class CarReservationServiceImpl implements CarReservationService {
     }
 
 public CarReservation addCarReservation(CarReservationDto reservationDto,Long id) {
+
     CarReservation reservation = new CarReservation();
     reservation.setId(id);
     reservation.setUserId(reservationDto.getUserId());

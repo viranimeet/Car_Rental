@@ -30,13 +30,13 @@ const Search_Car = () => {
         <div>
             <Header />
             <div>
-                <h2 className="text-2xl font-semibold mb-4">Available Cars</h2>
+                <h2 className="text-3xl font-semibold mb-4 text-center mt-2">Available Cars</h2>
                 <div className="grid grid-cols-3 gap-4 mb-20">
                     {cars.map((car) => (
                         <div key={car.id} className="bg-white rounded shadow-md p-4">
                             <h2 className="text-lg font-semibold mb-2">{car.carName}</h2>
                             <p>Number of Seats: {car.seats}</p>
-                            <p>Rate: {car.rate}</p>
+                            <p>Rate/Day: {car.rate}</p>
                             {isLoggedIn ? (
                                 <Link
                                     to={`/make_request/${car.id}`}
