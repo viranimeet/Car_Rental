@@ -23,12 +23,12 @@ public class AuthenticationController {
         if (userRepository.findByEmail(signUpRequest.getEmail()) != null) {
             return new ResponseEntity<>("User with this email already exists", HttpStatus.BAD_REQUEST);
         }
-        // Check if passwords match
+        
         if (!signUpRequest.getPassword().equals(signUpRequest.getConfirmPassword())) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Passwords do not match");
         }
 
-        // Delegate sign-up logic to the authentication service
+        
         authenticationService.signUp(signUpRequest);
         return ResponseEntity.ok("User registered successfully");
     }

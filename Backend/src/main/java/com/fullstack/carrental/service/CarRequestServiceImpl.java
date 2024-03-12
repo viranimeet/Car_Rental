@@ -33,14 +33,13 @@ public class CarRequestServiceImpl implements CarRequestService {
         if (optionalCar.isPresent() && optionalUser.isPresent()) {
             Car car = optionalCar.get();
             User user = optionalUser.get();
-            // Set car and user references in the request
+            
             request.setCar(car);
             request.setUser(user);
 
-            // Save the request
+            
             return carRequestRepository.save(request);
         } else {
-            // Handle case when car or user is not found
             return null;
         }
     }

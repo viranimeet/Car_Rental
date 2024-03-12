@@ -111,11 +111,9 @@ public CarReservation addCarReservation(CarReservationDto reservationDto,Long id
         if (optionalReservation.isPresent()) {
             CarReservation reservation = optionalReservation.get();
 
-            // Update status of the reservation
             reservation.setStatus("accepted");
             CarReservation savedReservation = carReservationRepository.save(reservation);
 
-            // Create entry in status history
 //            CarReservationStatusHistory statusHistory = new CarReservationStatusHistory();
 //            statusHistory.setReservation(savedReservation);
 //            statusHistory.setStatus("accepted");
@@ -133,7 +131,6 @@ public CarReservation addCarReservation(CarReservationDto reservationDto,Long id
         if (optionalReservation.isPresent()) {
             CarReservation reservation = optionalReservation.get();
 
-            // Update status of the reservation
             reservation.setStatus("rejected");
             CarReservation savedReservation = carReservationRepository.save(reservation);
             return savedReservation;
@@ -154,8 +151,5 @@ public CarReservation addCarReservation(CarReservationDto reservationDto,Long id
         }
         return userReservations;
     }
-
-
-
 
 }

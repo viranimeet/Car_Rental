@@ -82,7 +82,6 @@ public class Car {
         this.carDescription = carDescription;
     }
     
-    // Add image/photo logic here
 
 
 }
